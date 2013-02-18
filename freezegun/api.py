@@ -1,6 +1,7 @@
 import datetime
 import functools
 
+
 from dateutil import parser
 
 real_date = datetime.date
@@ -140,3 +141,7 @@ class _freeze_time():
 
 def freeze_time(time_to_freeze, tz_offset=0):
     return _freeze_time(time_to_freeze, tz_offset)
+
+def patch_django():
+    from django import utils
+    utils.timezone = FakeDatetime

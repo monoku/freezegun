@@ -15,6 +15,6 @@ __author__ = 'Steve Pulec'
 __license__ = 'Apache License 2.0'
 __copyright__ = 'Copyright 2012 Steve Pulec'
 
-from .api import freeze_time
+from .api import freeze_time, patch_django
 
-__all__ = ["freeze_time"]
+__all__ = ["freeze_time", "patch_django"]
